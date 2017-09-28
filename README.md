@@ -16,6 +16,9 @@ How to use
 2. Fix the default constant variables includes Twitter tokens to use (web_password, default_resize_rate).
 3. Run this server.py with python3.
 4. Connect to this server with the specified port(default 12345).
+```javascript
+http://localhost:12345/view/upload
+```
 
 Twitter Image API only suuport the image size up to 5MB. You should modify the constant variable 'default_resize_rate' by your uploading image file size. This variable will resize the resolution of your uploading image.
 
