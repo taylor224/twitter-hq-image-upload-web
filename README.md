@@ -13,7 +13,7 @@ How to use
 -----
 
 1. Go to Twitter developer site and make the new app and get 4 tokens below at this section.
-2. Fix the default constant variables to use (web_password, default_resize_rate).
+2. Fix the default constant variables includes Twitter tokens to use (web_password, default_resize_rate).
 3. Run this server.py with python3.
 4. Connect to this server with the specified port(default 12345).
 
