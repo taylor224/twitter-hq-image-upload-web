@@ -12,10 +12,10 @@ This server application uses that trick. When you upload image to this server, t
 How to use
 -----
 
-+ Go to Twitter developer sites and make the new app and get 4 tokens below at this section.
-+ Fix the default constant variables to use (web_password, default_resize_rate).
-+ Run this server.py with python3.
-+ Connect to this server with the specified port(default 12345).
+1. Go to Twitter developer sites and make the new app and get 4 tokens below at this section.
+2. Fix the default constant variables to use (web_password, default_resize_rate).
+3. Run this server.py with python3.
+4. Connect to this server with the specified port(default 12345).
 
 Twitter Image API only suuport the image size up to 5MB. You should modify the constant variable 'default_resize_rate' by your uploading image file size. This variable will resize the resolution of your uploading image.
 
