@@ -7,7 +7,7 @@ How to works
 
 Twitter resizes your upload image for reduce traffic and storage usage. But only JPG files.
 The PNG file with transparent pixel will not resized by Twitter. So you can upload high quality image to Twitter.
-This server application uses that trick. When you upload image to this server, this server will modify the last of pixel to transparently. Then Twitter doesn't reduce the image qulity.
+This server application uses that trick. When you upload image to this server, this server will modify the last of pixel to transparently. Then Twitter doesn't reduce the image quality.
 
 How to use
 -----
