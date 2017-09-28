@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uploader</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script>
+      window.onload = function () {
+          document.getElementById("uploadimage").onchange = function () {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("preview").src = e.target.result;
+            };
+
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+          };
+      }
+  </script>
+
+  <style>
+      .previewImage {
+          width: 100%;
+          height: auto;
+          margin-bottom: 50px;
+      }
+      .submit {
+          float:right;
+          position: relative;
+          display: block;
+      }
+  </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+          <h2>Media Upload System</h2>
+          <hr>
+          <div class="row">
+            <div class="col-lg-12">
+               <form action="/make/upload" method="post" enctype="multipart/form-data">
+                  <div class="form-group">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea type="text" class="form-control" id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <input type="file" id="uploadimage" name="uploadimage">
+                    <p class="help-block">Only image</p>
+                  </div>
+                  <input type="submit" class="btn btn-lg btn-primary submit" value="Upload">
+                </form>
+            </div>
+            <div class="col-lg-12">
+                <hr style="margin-top: 75px">
+                <img class="previewImage" id="preview" />
+            </div>
+          </div>
+    </div> <!-- /container -->
+
+  </body>
+</html>
